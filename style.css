@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main header {
+  background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/cc73e7c7-7860-4ef4-8fc8-1baf24569d2f/web/IN-en-20260126-TRIFECTA-perspective_90d714e8-acc9-4253-ab46-ca6b349c1989_large.jpg);
+  width: 100%;
+  height: 100%;
+}
+main header nav .logo {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(6000%) hue-rotate(0deg);
+}/*# sourceMappingURL=style.css.map */
