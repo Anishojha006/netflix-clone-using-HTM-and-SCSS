@@ -23,12 +23,19 @@ main{
         height: 50%;
         background-position: center;
         background-size: cover;
+        
 
 
         nav{
             @include flex(row,0rem);
             justify-content: space-between;
             align-items: center;
+            padding: 1rem;
+            padding-bottom: 0;
+             background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+            backdrop-filter: blur(10px);
+             -webkit-backdrop-filter: blur(10px); /* Safari support */
+             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
            
             .logo{
              filter: brightness(0) saturate(100%) invert(18%) sepia(96%)
@@ -37,7 +44,7 @@ main{
 
                 svg{
                     height: 4rem;
-                    width: 4rem;
+                    width: 5rem;
                 }
              }
             }
@@ -47,13 +54,17 @@ main{
                 align-items: center;
 
                 .svg-translator-icon{
-                    border: 0.8px solid white;
+                    border: 0.8px solid gray;
                     color: white;
-                    width: 1.5rem;
-                    background-color: black;
-                    svg{
-                        margin:0.19rem;
-                    }
+                    width: 4rem;
+                    background-color: #101010;
+                    height: 2rem;
+                    padding: 0.2rem;
+                    @include flex(row,0.5rem);
+                    padding: 0.3rem;
+                    border-radius: 0.2rem;
+                    
+                   
                 }
 
                

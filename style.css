@@ -39,13 +39,19 @@ main header nav {
   gap: 0rem;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  padding-bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 main header nav .logo {
   filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(6000%) hue-rotate(0deg);
 }
 main header nav .logo span svg {
   height: 4rem;
-  width: 4rem;
+  width: 5rem;
 }
 main header nav .select-language-and-btn {
   display: flex;
@@ -55,11 +61,15 @@ main header nav .select-language-and-btn {
   align-items: center;
 }
 main header nav .select-language-and-btn .svg-translator-icon {
-  border: 0.8px solid white;
+  border: 0.8px solid gray;
   color: white;
-  width: 1.5rem;
-  background-color: black;
-}
-main header nav .select-language-and-btn .svg-translator-icon svg {
-  margin: 0.19rem;
+  width: 4rem;
+  background-color: #101010;
+  height: 2rem;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
 }/*# sourceMappingURL=style.css.map */
