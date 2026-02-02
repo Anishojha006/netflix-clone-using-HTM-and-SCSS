@@ -89,8 +89,12 @@ main header .text input {
   border: 2px solid #a09292;
   padding: 0.8rem;
   border-radius: 0.5rem;
+  width: 90%;
 }
 main header .text button {
   border: none;
-  padding: 0.8rem;
+  padding: 1rem;
+}
+main header .text button i {
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */
