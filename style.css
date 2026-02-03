@@ -103,15 +103,15 @@ main header .box .text button {
 main header .box .text button i {
   font-size: 1rem;
 }
-main section {
+main section.part1 {
   width: 100%;
 }
-main section h4 {
+main section.part1 h4 {
   font-family: 700;
   margin-left: 1rem;
   margin-top: 1.5rem;
 }
-main section .slider {
+main section.part1 .slider {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -120,10 +120,10 @@ main section .slider {
   scroll-snap-type: x mandatory;
   padding: 2rem;
 }
-main section .slider::-webkit-scrollbar {
+main section.part1 .slider::-webkit-scrollbar {
   display: none;
 }
-main section .card {
+main section.part1 .card {
   position: relative;
   flex: 0 0 auto;
   height: 10rem;
@@ -131,11 +131,11 @@ main section .card {
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow ease;
 }
-main section .card img {
+main section.part1 .card img {
   width: 100%;
   border-radius: 1rem;
 }
-main section .card span {
+main section.part1 .card span {
   position: absolute;
   left: -1rem;
   top: 4rem;
@@ -145,8 +145,37 @@ main section .card span {
   font-weight: 800;
   font-family: Arial, Helvetica, sans-serif;
 }
-main section .card:hover {
+main section.part1 .card:hover {
   transform: scale(1.1);
   z-index: 10;
   box-shadow: 0px 10px 20px rgb(255, 255, 255);
+}
+main section.part2 {
+  margin-top: 2rem;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+main section.part2 .boxes {
+  height: 100%;
+  width: 100%;
+}
+main section.part2 .boxes .innerbox {
+  background-color: #1B1E3C;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  height: 11rem;
+}
+main section.part2 .boxes .innerbox h3 {
+  padding-bottom: 1rem;
+}
+main section.part2 .boxes .innerbox p {
+  color: #ADABB2;
+}
+main section.part2 .boxes .innerbox svg {
+  position: absolute;
+  right: 0;
+  top: 54%;
 }/*# sourceMappingURL=style.css.map */
