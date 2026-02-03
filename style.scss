@@ -8,6 +8,12 @@ body,html{
     height: 100%;
     font-family: sans-serif;
 }
+
+body{
+    background-color: black;
+    color: white;
+}
+
 @mixin flex($direction:row,$gap:0){
     display: flex;
     flex-direction: $direction;
@@ -24,26 +30,26 @@ main{
         height: 70%;
         background-position: center;
         background-size: cover;
-        border-bottom: 5px solid #ce193f;
         
+      .box{
+          width:100% ;
+          height: 100%;
+         background-color: black;
+         opacity: 0.8;
 
-
-        nav{
-            @include flex(row,0rem);
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            padding-bottom: 0;
-             background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-            backdrop-filter: blur(10px);
-             -webkit-backdrop-filter: blur(10px); /* Safari support */
-             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          nav{
+              
+              @include flex(row,0rem);
+              justify-content: space-between;
+              align-items: center;
+              padding: 1rem;
+              
            
             .logo{
              filter: brightness(0) saturate(100%) invert(18%) sepia(96%)
              saturate(6000%) hue-rotate(0deg);
              span{
-
+                 
                 svg{
                     height: 4rem;
                     width: 5rem;
@@ -65,12 +71,8 @@ main{
                     @include flex(row,0.5rem);
                     padding: 0.3rem;
                     border-radius: 0.2rem;
-                    
-                   
+                      
                 }
-
-               
-             
             }
         }
 
@@ -96,15 +98,57 @@ main{
 
                 i{
                     font-size: 1rem;
-                }
-
+                }   
             }
-
-            
-           
         }
     }
+    }
+    
     section{
-        
+        width: 100%;
+        h4{
+            font-family: 700;
+            margin-left: 1rem;
+            margin-top: 1.5rem;
+        }
+        .slider{
+         @include flex(row,2rem);
+         width: 100%;
+         overflow-x:auto; 
+         scroll-snap-type:  x mandatory;
+         padding: 2rem;
+        }
+
+        .slider::-webkit-scrollbar{
+             display: none;
+            }
+            .card{
+                position: relative;
+                flex: 0 0 auto;
+                height: 10rem;
+                width: 8rem;
+                border-radius: 1rem;
+                transition: transform 0.3s ease, box-shadow ease;
+                
+            img{
+                width: 100%;
+                border-radius: 1rem;
+            }
+            span{
+                position: absolute;
+                left: -1rem;
+                top: 4rem;
+                font-size: 5rem;
+                color: black;
+                -webkit-text-stroke: 1px white;
+                font-weight: 800; 
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+      .card:hover{
+            transform: scale(1.1);
+            z-index: 10;
+            box-shadow: 0px 10px 20px rgba(255,255,255,02);
+        }
     }
 }

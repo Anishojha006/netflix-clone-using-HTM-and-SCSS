@@ -10,6 +10,11 @@ body, html {
   font-family: sans-serif;
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 .button {
   border-radius: 0.3rem;
   background-color: red;
@@ -32,36 +37,36 @@ main header {
   height: 70%;
   background-position: center;
   background-size: cover;
-  border-bottom: 5px solid #ce193f;
 }
-main header nav {
+main header .box {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+main header .box nav {
   display: flex;
   flex-direction: row;
   gap: 0rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  padding-bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-main header nav .logo {
+main header .box nav .logo {
   filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(6000%) hue-rotate(0deg);
 }
-main header nav .logo span svg {
+main header .box nav .logo span svg {
   height: 4rem;
   width: 5rem;
 }
-main header nav .select-language-and-btn {
+main header .box nav .select-language-and-btn {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
 }
-main header nav .select-language-and-btn .svg-translator-icon {
+main header .box nav .select-language-and-btn .svg-translator-icon {
   border: 0.8px solid gray;
   color: white;
   width: 4rem;
@@ -74,7 +79,7 @@ main header nav .select-language-and-btn .svg-translator-icon {
   padding: 0.3rem;
   border-radius: 0.2rem;
 }
-main header .text {
+main header .box .text {
   color: white;
   padding: 2rem;
   padding-top: 5rem;
@@ -84,17 +89,64 @@ main header .text {
   gap: 1rem;
   align-items: center;
 }
-main header .text input {
+main header .box .text input {
   background-color: #10100f;
   border: 2px solid #a09292;
   padding: 0.8rem;
   border-radius: 0.5rem;
   width: 90%;
 }
-main header .text button {
+main header .box .text button {
   border: none;
   padding: 1rem;
 }
-main header .text button i {
+main header .box .text button i {
   font-size: 1rem;
+}
+main section {
+  width: 100%;
+}
+main section h4 {
+  font-family: 700;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+main section .slider {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem;
+}
+main section .slider::-webkit-scrollbar {
+  display: none;
+}
+main section .card {
+  position: relative;
+  flex: 0 0 auto;
+  height: 10rem;
+  width: 8rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow ease;
+}
+main section .card img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main section .card span {
+  position: absolute;
+  left: -1rem;
+  top: 4rem;
+  font-size: 5rem;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main section .card:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0px 10px 20px rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */
