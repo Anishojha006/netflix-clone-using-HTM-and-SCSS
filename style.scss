@@ -154,7 +154,6 @@ main{
     section.part2{
         margin-top: 2rem;
         padding: 1rem;
-        height: 100%;
         width: 100%;
 
         .boxes{
@@ -167,7 +166,7 @@ main{
                 padding: 1rem;
                 border-radius: 1rem;
                 position: relative;
-                height: 11rem;
+                height: 12rem;
 
                 h3{
                     padding-bottom: 1rem;
@@ -183,4 +182,21 @@ main{
             }
         }
     }
+    section.part3{
+        padding: 1.5rem;
+        margin-top: 1rem;
+        @include flex(column,0.5rem);
+        h3{
+            padding-bottom: 1rem;
+        }
+
+        .questions{
+            background-color: #2D2D2D;
+            height: 4rem;
+            padding:1.5rem;
+            @include flex(row,0rem);
+            justify-content: space-between;
+        }
+    }
+    
 }

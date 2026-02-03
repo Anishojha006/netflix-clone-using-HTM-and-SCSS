@@ -153,7 +153,6 @@ main section.part1 .card:hover {
 main section.part2 {
   margin-top: 2rem;
   padding: 1rem;
-  height: 100%;
   width: 100%;
 }
 main section.part2 .boxes {
@@ -166,7 +165,7 @@ main section.part2 .boxes .innerbox {
   padding: 1rem;
   border-radius: 1rem;
   position: relative;
-  height: 11rem;
+  height: 12rem;
 }
 main section.part2 .boxes .innerbox h3 {
   padding-bottom: 1rem;
@@ -178,4 +177,23 @@ main section.part2 .boxes .innerbox svg {
   position: absolute;
   right: 0;
   top: 54%;
+}
+main section.part3 {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section.part3 h3 {
+  padding-bottom: 1rem;
+}
+main section.part3 .questions {
+  background-color: #2D2D2D;
+  height: 4rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
