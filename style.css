@@ -196,4 +196,84 @@ main section.part3 .questions {
   flex-direction: row;
   gap: 0rem;
   justify-content: space-between;
+}
+main section.part4 {
+  padding: 1rem;
+  padding-top: 6rem;
+}
+main section.part4 h3 {
+  font-weight: 100;
+  padding-bottom: 1rem;
+}
+main section.part4 button {
+  background-color: red;
+  border: none;
+  padding: 0.8rem;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  margin-left: 0.1rem;
+  margin-top: 1rem;
+}
+main section.part4 input {
+  background-color: #10100f;
+  border: 1px solid #a09292;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  width: 90%;
+}
+main section.part5 {
+  padding: 1.6rem;
+  color: gray;
+}
+main section.part5 a {
+  color: gray;
+}
+main section.part5 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 0.9rem;
+  padding-top: 2rem;
+}
+main section.part5 ul li a {
+  color: rgb(133, 121, 121);
+}
+main footer {
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+main footer div {
+  background-color: #0F0F0F;
+  width: 9rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 0.3rem;
+}
+main footer div i {
+  margin: 0 0.4rem;
+}
+main footer div span {
+  font-size: 0.9rem;
+}
+main footer p {
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+main footer button {
+  width: 100%;
+  height: 2.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 5rem;
+  color: white;
+  font-weight: 500;
+  background-color: red;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  border: none;
 }/*# sourceMappingURL=style.css.map */
