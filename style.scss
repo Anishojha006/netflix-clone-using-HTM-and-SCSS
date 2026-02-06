@@ -288,3 +288,23 @@ main{
            }
     }
 }
+
+@media screen and (min-width: 900px) {
+  main{
+    header{
+        .box{
+
+            nav{
+                .logo{
+            span{
+                svg{
+                width: 10rem;
+            }
+            }}
+            }
+        }
+    }
+  }
+}
+
+

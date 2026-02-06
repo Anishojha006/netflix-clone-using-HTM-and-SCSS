@@ -276,4 +276,10 @@ main footer button {
   font-size: 1.2rem;
   border-radius: 0.3rem;
   border: none;
+}
+
+@media screen and (min-width: 900px) {
+  main header .box nav .logo span svg {
+    width: 10rem;
+  }
 }/*# sourceMappingURL=style.css.map */
