@@ -31,11 +31,11 @@ main{
         background-position: center;
         background-size: cover;
         
-      .box{
-          width:100% ;
-          height: 100%;
-         background-color: black;
-         opacity: 0.8;
+        .box{
+            width:100% ;
+            height: 100%;
+            background-color: black;
+            opacity: 0.8;
 
           nav{
               
@@ -71,6 +71,11 @@ main{
                     @include flex(row,0.5rem);
                     padding: 0.3rem;
                     border-radius: 0.2rem;
+
+
+                    span{
+                        display: none;
+                    }
                       
                 }
             }
@@ -334,10 +339,28 @@ main{
 
                     button{
                         margin-left: 0;
+                        opacity: 1;
                     }
                     
                 }
             }
+        }
+    }
+    section.part1{
+        h4{
+            margin-left: 15rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .slider{
+        width: 75%;
+        height: 20rem;
+        margin-left: 17vw;
+
+        .card{
+            width: 13rem;
+        }
         }
     }
   }

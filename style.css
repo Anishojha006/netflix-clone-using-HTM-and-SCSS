@@ -79,6 +79,9 @@ main header .box nav .select-language-and-btn .svg-translator-icon {
   padding: 0.3rem;
   border-radius: 0.2rem;
 }
+main header .box nav .select-language-and-btn .svg-translator-icon span {
+  display: none;
+}
 main header .box .text {
   color: white;
   padding: 2rem;
@@ -310,5 +313,19 @@ main footer button {
   }
   main header .box .text .button-input button {
     margin-left: 0;
+    opacity: 1;
+  }
+  main section.part1 h4 {
+    margin-left: 15rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  main section.part1 .slider {
+    width: 75%;
+    height: 20rem;
+    margin-left: 17vw;
+  }
+  main section.part1 .slider .card {
+    width: 13rem;
   }
 }/*# sourceMappingURL=style.css.map */
