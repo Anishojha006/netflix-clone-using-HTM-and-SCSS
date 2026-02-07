@@ -303,6 +303,7 @@ main{
 @media screen and (min-width: 900px) {
   main{
     header{
+        height: 100%;
         .box{
 
             nav{
@@ -330,8 +331,9 @@ main{
             .text{
 
                 h1{
-                width: 28rem;
-                font-weight: 900;
+             width: 31rem;
+             font-weight: 900;
+             font-size: 3rem;
                 }
                 .button-input{
                     flex-direction: row;
@@ -354,13 +356,44 @@ main{
         }
 
         .slider{
-        width: 75%;
+        width: 80%;
         height: 20rem;
-        margin-left: 17vw;
+        margin-left: 8vw;
 
         .card{
             width: 13rem;
         }
+        }
+    }
+    section.part2{
+       
+   >h3{
+    padding-left: 12rem;
+
+   }
+        .boxes{
+        @include flex(row,1rem);
+        padding-left: 9rem;
+        padding-right: 9rem;
+
+        .innerbox{
+            height: 16rem;
+            margin-top: 0.6rem;
+        }
+        }
+    }
+    section.part3{
+        padding: 0rem 9rem;
+        font-size: 1.5rem;
+        .questions{
+            height: 6rem;
+            padding-top: 2rem;
+
+        }
+    }
+    section.part4{
+        h3{
+            text-align: center;
         }
     }
   }
