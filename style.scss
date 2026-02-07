@@ -85,20 +85,26 @@ main{
             @include flex(column, 1rem);
             align-items: center;
 
-            input{
+            .button-input{
+                @include flex(column,2rem);
+                input{
                 background-color: #10100f;
                 border: 2px solid #a09292;
                 padding: 0.8rem;
-                border-radius: 0.5rem;
-                width: 90%;
+                border-radius: 0.2rem;
+                width: 20rem;
             }
             button{
                 border: none;
                 padding: 1rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin-left: 6rem;
 
                 i{
                     font-size: 1rem;
                 }   
+            }
             }
         }
     }
@@ -295,12 +301,42 @@ main{
         .box{
 
             nav{
+                    margin-left: 9rem;
+                    margin-right: 9rem;
+                
+                    .select-language-and-btn{
+
+                        .svg-translator-icon{
+                            width: 9rem;
+
+                            span{
+                                display: block;
+                            }
+                        }
+                    }
+
                 .logo{
             span{
                 svg{
                 width: 10rem;
             }
             }}
+            }
+            .text{
+
+                h1{
+                width: 28rem;
+                font-weight: 900;
+                }
+                .button-input{
+                    flex-direction: row;
+                    gap: 0.6rem;
+
+                    button{
+                        margin-left: 0;
+                    }
+                    
+                }
             }
         }
     }

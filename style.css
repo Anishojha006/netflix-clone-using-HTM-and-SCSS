@@ -89,18 +89,26 @@ main header .box .text {
   gap: 1rem;
   align-items: center;
 }
-main header .box .text input {
+main header .box .text .button-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main header .box .text .button-input input {
   background-color: #10100f;
   border: 2px solid #a09292;
   padding: 0.8rem;
-  border-radius: 0.5rem;
-  width: 90%;
+  border-radius: 0.2rem;
+  width: 20rem;
 }
-main header .box .text button {
+main header .box .text .button-input button {
   border: none;
   padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 6rem;
 }
-main header .box .text button i {
+main header .box .text .button-input button i {
   font-size: 1rem;
 }
 main section.part1 {
@@ -279,7 +287,28 @@ main footer button {
 }
 
 @media screen and (min-width: 900px) {
+  main header .box nav {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+  main header .box nav .select-language-and-btn .svg-translator-icon {
+    width: 9rem;
+  }
+  main header .box nav .select-language-and-btn .svg-translator-icon span {
+    display: block;
+  }
   main header .box nav .logo span svg {
     width: 10rem;
+  }
+  main header .box .text h1 {
+    width: 28rem;
+    font-weight: 900;
+  }
+  main header .box .text .button-input {
+    flex-direction: row;
+    gap: 0.6rem;
+  }
+  main header .box .text .button-input button {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
