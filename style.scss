@@ -217,6 +217,7 @@ main{
         h3{
             font-weight: 100;
             padding-bottom: 1rem;
+            font-size: 1rem;
         }
         button{
         background-color: red;
@@ -395,6 +396,57 @@ main{
         h3{
             text-align: center;
         }
+        .part4-box{
+            @include flex(row,0.4rem);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            input{
+                width: 35%;
+                padding:1.2rem;
+                border: 1px solid white;
+            }
+            button{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    section.part5{
+        padding: 10rem;
+        padding-top:3rem;
+        color: white;
+        
+        .ul-links{
+            @include flex(row,10rem);
+            
+          a{
+            color: white;
+          }
+            
+            
+        }
+    }
+    footer{
+    margin: 10rem;
+    margin-top: -5rem;
+    padding-bottom: 10rem;
+
+    p{
+        color: gray;
+        font-size: 0.8rem;
+    }
+    p:nth-child(2){
+    color: rgba(255, 255, 255, 0.7);
+    font-size:1rem;
+    }
+    a{
+        color: rgb(76, 76, 233);
+    }
+    button{
+        display: none;
+    }
+    
     }
   }
 }

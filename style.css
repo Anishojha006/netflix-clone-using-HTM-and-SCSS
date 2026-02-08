@@ -215,6 +215,7 @@ main section.part4 {
 main section.part4 h3 {
   font-weight: 100;
   padding-bottom: 1rem;
+  font-size: 1rem;
 }
 main section.part4 button {
   background-color: red;
@@ -356,5 +357,53 @@ main footer button {
   }
   main section.part4 h3 {
     text-align: center;
+  }
+  main section.part4 .part4-box {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main section.part4 .part4-box input {
+    width: 35%;
+    padding: 1.2rem;
+    border: 1px solid white;
+  }
+  main section.part4 .part4-box button {
+    margin-bottom: 1rem;
+  }
+  main section.part5 {
+    padding: 10rem;
+    padding-top: 3rem;
+    color: white;
+  }
+  main section.part5 .ul-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+  }
+  main section.part5 .ul-links a {
+    color: white;
+  }
+  main footer {
+    margin: 10rem;
+    margin-top: -5rem;
+    padding-bottom: 10rem;
+  }
+  main footer p {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  main footer p:nth-child(2) {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+  }
+  main footer a {
+    color: rgb(76, 76, 233);
+  }
+  main footer button {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
