@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
   font-family: sans-serif;
@@ -171,7 +172,7 @@ main section.part2 .boxes {
   width: 100%;
 }
 main section.part2 .boxes .innerbox {
-  background-color: #1B1E3C;
+  background-color: #1b1e3c;
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -182,7 +183,7 @@ main section.part2 .boxes .innerbox h3 {
   padding-bottom: 1rem;
 }
 main section.part2 .boxes .innerbox p {
-  color: #ADABB2;
+  color: #adabb2;
 }
 main section.part2 .boxes .innerbox svg {
   position: absolute;
@@ -200,7 +201,7 @@ main section.part3 h3 {
   padding-bottom: 1rem;
 }
 main section.part3 .questions {
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
   height: 4rem;
   padding: 1.5rem;
   display: flex;
@@ -258,7 +259,7 @@ main footer {
   margin-bottom: 1rem;
 }
 main footer div {
-  background-color: #0F0F0F;
+  background-color: #0f0f0f;
   width: 9rem;
   height: 2rem;
   padding: 0.5rem;
@@ -402,6 +403,74 @@ main footer button {
   }
   main footer a {
     color: rgb(76, 76, 233);
+  }
+  main footer button {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  main header {
+    height: 62%;
+  }
+  main header .box {
+    background-color: #0b0b0b;
+  }
+  main header .box .text h1 {
+    width: 59%;
+  }
+  main header .box .text h3 {
+    font-size: 1.09rem;
+    width: 69%;
+  }
+  main header .box .text .button-input {
+    flex-direction: row;
+    gap: 0rem;
+  }
+  main header .box .text .button-input button {
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+  }
+  main header .box .text .button-input button i {
+    font-size: 1.6rem;
+  }
+  main header .box nav {
+    padding: 2rem;
+    padding-top: 0.2rem;
+  }
+  main header .box nav .select-language-and-btn .svg-translator-icon {
+    width: 9rem;
+  }
+  main header .box nav .select-language-and-btn .svg-translator-icon span {
+    display: block;
+  }
+  main header .box nav span svg {
+    width: 6rem;
+  }
+  main section.part4 h3 {
+    text-align: center;
+  }
+  main section.part4 .part4-box {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  main section.part4 .part4-box input {
+    width: 70%;
+  }
+  main section.part4 .part4-box button {
+    margin-top: 0;
+  }
+  main section.part5 .ul-links {
+    display: flex;
+    gap: 4rem;
+  }
+  main section.part5 .ul-links a {
+    color: white;
+  }
+  main footer {
+    padding-bottom: 10rem;
   }
   main footer button {
     display: none;

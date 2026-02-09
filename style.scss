@@ -1,459 +1,516 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body,html{
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-}
-
-body{
-    background-color: black;
-    color: white;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
 }
 
-@mixin flex($direction:row,$gap:0){
-    display: flex;
-    flex-direction: $direction;
-    gap:$gap;
+body {
+  background-color: black;
+  color: white;
+}
+
+@mixin flex($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
 }
 @import "button";
-main{
+main {
+  width: 100%;
+  height: 100%;
+
+  header {
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/cc73e7c7-7860-4ef4-8fc8-1baf24569d2f/web/IN-en-20260126-TRIFECTA-perspective_90d714e8-acc9-4253-ab46-ca6b349c1989_large.jpg);
     width: 100%;
-    height: 100%;
+    height: 70%;
+    background-position: center;
+    background-size: cover;
 
-    header{
-        background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/cc73e7c7-7860-4ef4-8fc8-1baf24569d2f/web/IN-en-20260126-TRIFECTA-perspective_90d714e8-acc9-4253-ab46-ca6b349c1989_large.jpg);
-        width: 100%;
-        height: 70%;
-        background-position: center;
-        background-size: cover;
-        
-        .box{
-            width:100% ;
-            height: 100%;
-            background-color: black;
-            opacity: 0.8;
+    .box {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.8;
 
-          nav{
-              
-              @include flex(row,0rem);
-              justify-content: space-between;
-              align-items: center;
-              padding: 1rem;
-              
-           
-            .logo{
-             filter: brightness(0) saturate(100%) invert(18%) sepia(96%)
-             saturate(6000%) hue-rotate(0deg);
-             span{
-                 
-                svg{
-                    height: 4rem;
-                    width: 5rem;
-                }
-             }
+      nav {
+        @include flex(row, 0rem);
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        .logo {
+          filter: brightness(0) saturate(100%) invert(18%) sepia(96%)
+            saturate(6000%) hue-rotate(0deg);
+          span {
+            svg {
+              height: 4rem;
+              width: 5rem;
             }
-            .select-language-and-btn{
-                @include flex(row,1rem);
-                justify-content: space-between;
-                align-items: center;
-
-                .svg-translator-icon{
-                    border: 0.8px solid gray;
-                    color: white;
-                    width: 4rem;
-                    background-color: #101010;
-                    height: 2rem;
-                    padding: 0.2rem;
-                    @include flex(row,0.5rem);
-                    padding: 0.3rem;
-                    border-radius: 0.2rem;
-
-
-                    span{
-                        display: none;
-                    }
-                      
-                }
-            }
+          }
         }
+        .select-language-and-btn {
+          @include flex(row, 1rem);
+          justify-content: space-between;
+          align-items: center;
 
-        .text{
-            
+          .svg-translator-icon {
+            border: 0.8px solid gray;
             color: white;
-            padding: 2rem;
-            padding-top: 5rem;
-            text-align: center;
-            @include flex(column, 1rem);
-            align-items: center;
-
-            .button-input{
-                @include flex(column,2rem);
-                input{
-                background-color: #10100f;
-                border: 2px solid #a09292;
-                padding: 0.8rem;
-                border-radius: 0.2rem;
-                width: 20rem;
-            }
-            button{
-                border: none;
-                padding: 1rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
-                margin-left: 6rem;
-
-                i{
-                    font-size: 1rem;
-                }   
-            }
-            }
-        }
-    }
-    }
-    
-    section.part1{
-        width: 100%;
-        h4{
-            font-family: 700;
-            margin-left: 1rem;
-            margin-top: 1.5rem;
-        }
-        .slider{
-         @include flex(row,2rem);
-         width: 100%;
-         overflow-x:auto; 
-         scroll-snap-type:  x mandatory;
-         padding: 2rem;
-        }
-
-        .slider::-webkit-scrollbar{
-             display: none;
-            }
-            .card{
-                position: relative;
-                flex: 0 0 auto;
-                height: 10rem;
-                width: 8rem;
-                border-radius: 1rem;
-                transition: transform 0.3s ease, box-shadow ease;
-                
-            img{
-                width: 100%;
-                border-radius: 1rem;
-            }
-            span{
-                position: absolute;
-                left: -1rem;
-                top: 4rem;
-                font-size: 5rem;
-                color: black;
-                -webkit-text-stroke: 1px white;
-                font-weight: 800; 
-                font-family: Arial, Helvetica, sans-serif;
-            }
-        }
-      .card:hover{
-            transform: scale(1.1);
-            z-index: 10;
-            box-shadow: 0px 10px 20px rgba(255,255,255,02);
-        }
-    }
-    section.part2{
-        margin-top: 2rem;
-        padding: 1rem;
-        width: 100%;
-
-        .boxes{
-            height: 100%;
-            width: 100%;
-
-            .innerbox{
-                background-color: #1B1E3C;
-                margin: 0.5rem;
-                padding: 1rem;
-                border-radius: 1rem;
-                position: relative;
-                height: 12rem;
-
-                h3{
-                    padding-bottom: 1rem;
-                }
-                p{
-                    color: #ADABB2;
-                }
-                svg{
-               position: absolute;
-               right: 0;
-               top:54%;
-                } 
-            }
-        }
-    }
-    section.part3{
-        padding: 1.5rem;
-        margin-top: 1rem;
-        @include flex(column,0.5rem);
-        h3{
-            padding-bottom: 1rem;
-        }
-
-        .questions{
-            background-color: #2D2D2D;
-            height: 4rem;
-            padding:1.5rem;
-            @include flex(row,0rem);
-            justify-content: space-between;
-        }
-    }
-
-    section.part4{
-        padding: 1rem;
-        padding-top: 6rem;
-        
-        h3{
-            font-weight: 100;
-            padding-bottom: 1rem;
-            font-size: 1rem;
-        }
-        button{
-        background-color: red;
-        border: none;
-        padding: 0.8rem;
-        color: white;
-        font-size: 1.2rem;
-        border-radius:0.2rem;
-        margin-left: 0.1rem;
-        margin-top: 1rem;
-          
-        }
-        input{
-        background-color: #10100f;
-        border: 1px solid #a09292;
-        padding: 0.8rem;
-        border-radius: 0.3rem;
-        width: 90%;
-        }
-    }
-    section.part5{
-        padding: 1.6rem;
-        color: gray;
-        a{
-            color: gray;
-        }
-        ul{
-            list-style: none;
-            @include flex(column,1.2rem);
-            font-size: 0.9rem;
-            padding-top: 2rem;
-             
-            li{
-                a{
-                    color: rgb(133, 121, 121);
-                }
-            }
-            
-        }
-    }
-    footer{
-        padding: 1rem;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-
-        div{
-            background-color: #0F0F0F;
-            width: 9rem;
+            width: 4rem;
+            background-color: #101010;
             height: 2rem;
-            padding: 0.5rem;
-            border: 1px solid white;
-            border-radius: 0.3rem;
+            padding: 0.2rem;
+            @include flex(row, 0.5rem);
+            padding: 0.3rem;
+            border-radius: 0.2rem;
 
-            i{
-                margin: 0 0.4rem;
+            span {
+              display: none;
             }
+          }
+        }
+      }
 
-            span{
-                font-size: 0.9rem;
-            }
+      .text {
+        color: white;
+        padding: 2rem;
+        padding-top: 5rem;
+        text-align: center;
+        @include flex(column, 1rem);
+        align-items: center;
 
-           }
-           p{
-            margin-top: 2.5rem;
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.7);
-           }
-           button{
-            width: 100%;
-            height: 2.6rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            margin-top: 5rem;
-            color: white;
-            font-weight: 500;
-            background-color: red;
-            font-size: 1.2rem;
-            border-radius: 0.3rem;
+        .button-input {
+          @include flex(column, 2rem);
+          input {
+            background-color: #10100f;
+            border: 2px solid #a09292;
+            padding: 0.8rem;
+            border-radius: 0.2rem;
+            width: 20rem;
+          }
+          button {
             border: none;
-           }
+            padding: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-left: 6rem;
+
+            i {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
     }
+  }
+
+  section.part1 {
+    width: 100%;
+    h4 {
+      font-family: 700;
+      margin-left: 1rem;
+      margin-top: 1.5rem;
+    }
+    .slider {
+      @include flex(row, 2rem);
+      width: 100%;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 2rem;
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+    .card {
+      position: relative;
+      flex: 0 0 auto;
+      height: 10rem;
+      width: 8rem;
+      border-radius: 1rem;
+      transition:
+        transform 0.3s ease,
+        box-shadow ease;
+
+      img {
+        width: 100%;
+        border-radius: 1rem;
+      }
+      span {
+        position: absolute;
+        left: -1rem;
+        top: 4rem;
+        font-size: 5rem;
+        color: black;
+        -webkit-text-stroke: 1px white;
+        font-weight: 800;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+    .card:hover {
+      transform: scale(1.1);
+      z-index: 10;
+      box-shadow: 0px 10px 20px rgba(255, 255, 255, 02);
+    }
+  }
+  section.part2 {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+
+    .boxes {
+      height: 100%;
+      width: 100%;
+
+      .innerbox {
+        background-color: #1b1e3c;
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
+        height: 12rem;
+
+        h3 {
+          padding-bottom: 1rem;
+        }
+        p {
+          color: #adabb2;
+        }
+        svg {
+          position: absolute;
+          right: 0;
+          top: 54%;
+        }
+      }
+    }
+  }
+  section.part3 {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    @include flex(column, 0.5rem);
+    h3 {
+      padding-bottom: 1rem;
+    }
+
+    .questions {
+      background-color: #2d2d2d;
+      height: 4rem;
+      padding: 1.5rem;
+      @include flex(row, 0rem);
+      justify-content: space-between;
+    }
+  }
+
+  section.part4 {
+    padding: 1rem;
+    padding-top: 6rem;
+
+    h3 {
+      font-weight: 100;
+      padding-bottom: 1rem;
+      font-size: 1rem;
+    }
+    button {
+      background-color: red;
+      border: none;
+      padding: 0.8rem;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 0.2rem;
+      margin-left: 0.1rem;
+      margin-top: 1rem;
+    }
+    input {
+      background-color: #10100f;
+      border: 1px solid #a09292;
+      padding: 0.8rem;
+      border-radius: 0.3rem;
+      width: 90%;
+    }
+  }
+  section.part5 {
+    padding: 1.6rem;
+    color: gray;
+    a {
+      color: gray;
+    }
+    ul {
+      list-style: none;
+      @include flex(column, 1.2rem);
+      font-size: 0.9rem;
+      padding-top: 2rem;
+
+      li {
+        a {
+          color: rgb(133, 121, 121);
+        }
+      }
+    }
+  }
+  footer {
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    div {
+      background-color: #0f0f0f;
+      width: 9rem;
+      height: 2rem;
+      padding: 0.5rem;
+      border: 1px solid white;
+      border-radius: 0.3rem;
+
+      i {
+        margin: 0 0.4rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+    p {
+      margin-top: 2.5rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    button {
+      width: 100%;
+      height: 2.6rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 5rem;
+      color: white;
+      font-weight: 500;
+      background-color: red;
+      font-size: 1.2rem;
+      border-radius: 0.3rem;
+      border: none;
+    }
+  }
 }
 
 @media screen and (min-width: 900px) {
-  main{
-    header{
-        height: 100%;
-        .box{
+  main {
+    header {
+      height: 100%;
+      .box {
+        nav {
+          margin-left: 9rem;
+          margin-right: 9rem;
 
-            nav{
-                    margin-left: 9rem;
-                    margin-right: 9rem;
-                
-                    .select-language-and-btn{
+          .select-language-and-btn {
+            .svg-translator-icon {
+              width: 9rem;
 
-                        .svg-translator-icon{
-                            width: 9rem;
+              span {
+                display: block;
+              }
+            }
+          }
 
-                            span{
-                                display: block;
-                            }
-                        }
-                    }
-
-                .logo{
-            span{
-                svg{
+          .logo {
+            span {
+              svg {
                 width: 10rem;
+              }
             }
-            }}
-            }
-            .text{
-
-                h1{
-             width: 31rem;
-             font-weight: 900;
-             font-size: 3rem;
-                }
-                .button-input{
-                    flex-direction: row;
-                    gap: 0.6rem;
-
-                    button{
-                        margin-left: 0;
-                        opacity: 1;
-                    }
-                    
-                }
-            }
+          }
         }
+        .text {
+          h1 {
+            width: 31rem;
+            font-weight: 900;
+            font-size: 3rem;
+          }
+          .button-input {
+            flex-direction: row;
+            gap: 0.6rem;
+
+            button {
+              margin-left: 0;
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
-    section.part1{
-        h4{
-            margin-left: 15rem;
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
+    section.part1 {
+      h4 {
+        margin-left: 15rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
 
-        .slider{
+      .slider {
         width: 80%;
         height: 20rem;
         margin-left: 8vw;
 
-        .card{
-            width: 13rem;
+        .card {
+          width: 13rem;
         }
-        }
+      }
     }
-    section.part2{
-       
-   >h3{
-    padding-left: 12rem;
-
-   }
-        .boxes{
-        @include flex(row,1rem);
+    section.part2 {
+      > h3 {
+        padding-left: 12rem;
+      }
+      .boxes {
+        @include flex(row, 1rem);
         padding-left: 9rem;
         padding-right: 9rem;
 
-        .innerbox{
-            height: 16rem;
-            margin-top: 0.6rem;
+        .innerbox {
+          height: 16rem;
+          margin-top: 0.6rem;
         }
-        }
+      }
     }
-    section.part3{
-        padding: 0rem 9rem;
-        font-size: 1.5rem;
-        .questions{
-            height: 6rem;
-            padding-top: 2rem;
+    section.part3 {
+      padding: 0rem 9rem;
+      font-size: 1.5rem;
+      .questions {
+        height: 6rem;
+        padding-top: 2rem;
+      }
+    }
+    section.part4 {
+      h3 {
+        text-align: center;
+      }
+      .part4-box {
+        @include flex(row, 0.4rem);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
 
+        input {
+          width: 35%;
+          padding: 1.2rem;
+          border: 1px solid white;
         }
+        button {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    section.part5 {
+      padding: 10rem;
+      padding-top: 3rem;
+      color: white;
+
+      .ul-links {
+        @include flex(row, 10rem);
+
+        a {
+          color: white;
+        }
+      }
+    }
+    footer {
+      margin: 10rem;
+      margin-top: -5rem;
+      padding-bottom: 10rem;
+
+      p {
+        color: gray;
+        font-size: 0.8rem;
+      }
+      p:nth-child(2) {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+      }
+      a {
+        color: rgb(76, 76, 233);
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    header {
+      height: 62%;
+      .box {
+        background-color: #0b0b0b;
+        .text {
+          h1 {
+            width: 59%;
+          }
+          h3 {
+            font-size: 1.09rem;
+            width: 69%;
+          }
+          .button-input {
+            flex-direction: row;
+            gap: 0rem;
+            button {
+              margin-left: 0.5rem;
+              font-size: 1.3rem;
+              i {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+        nav {
+          padding: 2rem;
+          padding-top: 0.2rem;
+          .select-language-and-btn {
+            .svg-translator-icon {
+              width: 9rem;
+              span {
+                display: block;
+              }
+            }
+          }
+          span {
+            svg {
+              width: 6rem;
+            }
+          }
+        }
+      }
     }
     section.part4{
         h3{
             text-align: center;
         }
         .part4-box{
-            @include flex(row,0.4rem);
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-            input{
-                width: 35%;
-                padding:1.2rem;
-                border: 1px solid white;
-            }
-            button{
-                margin-bottom: 1rem;
-            }
+        @include flex(row,1rem);
+        justify-content: center;
+        align-items: center;
+        input{
+                width: 70%;
+        }
+        button{
+            margin-top: 0;
+        }
         }
     }
     section.part5{
-        padding: 10rem;
-        padding-top:3rem;
-        color: white;
-        
         .ul-links{
-            @include flex(row,10rem);
-            
+        display: flex;
+        gap: 4rem;
           a{
             color: white;
           }
-            
-            
         }
     }
     footer{
-    margin: 10rem;
-    margin-top: -5rem;
-    padding-bottom: 10rem;
-
-    p{
-        color: gray;
-        font-size: 0.8rem;
-    }
-    p:nth-child(2){
-    color: rgba(255, 255, 255, 0.7);
-    font-size:1rem;
-    }
-    a{
-        color: rgb(76, 76, 233);
-    }
-    button{
-        display: none;
-    }
-    
+        padding-bottom: 10rem;
+        button{
+            display: none;
+        }
     }
   }
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-
-
